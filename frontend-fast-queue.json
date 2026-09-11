@@ -1,0 +1,9 @@
+{
+  "sockets": 6,
+  "earlyMs": 20,
+  "offsetsMs": [0, 0, 0, 0, 0, 0],
+  "nameservers": [],
+  "periodYears": 2,
+  "identicalCreate": true,
+  "fire": "t0 - earlyMs, then write all 6 prebuilt frames"
+}
