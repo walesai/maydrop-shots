@@ -215,7 +215,14 @@ async function sleepUntil(targetMs) {
     else await new Promise((r) => setImmediate(r));
   }
 }
-function esc(s) { return String(s).replace(/&/g, "&").replace(/</g, "<").replace(/>/g, ">").replace(/"/g, """); }
+function esc(s) {
+  return String(s).replace(/[&<>"]/g, function (ch) {
+    if (ch === "&") return "&#38;";
+    if (ch === "<") return "&#60;";
+    if (ch === ">") return "&#62;";
+    return "&#34;";
+  });
+}
 function die(msg) { console.error(msg); process.exit(1); }
 function parseArgs(argv) {
   const out = {};
