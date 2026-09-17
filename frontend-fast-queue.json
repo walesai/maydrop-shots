@@ -1,9 +1,10 @@
 {
   "sockets": 6,
-  "earlyMs": -55,
+  "earlyMs": 10,
   "offsetsMs": [0, 0, 0, 0, 0, 0],
   "nameservers": [],
   "periodYears": 2,
   "identicalCreate": true,
-  "fire": "t0 - earlyMs, then write all 6 prebuilt frames"
+  "retriesMs": [2000, 30000],
+  "fire": "t0 - earlyMs first burst; if no 1000, rewrite same sockets at T+2s and T+30s"
 }
