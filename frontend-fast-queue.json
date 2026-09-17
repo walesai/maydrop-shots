@@ -1,6 +1,6 @@
 {
   "sockets": 6,
-  "earlyMs": 10,
+  "earlyMs": -55,
   "offsetsMs": [0, 0, 0, 0, 0, 0],
   "nameservers": [],
   "periodYears": 2,
